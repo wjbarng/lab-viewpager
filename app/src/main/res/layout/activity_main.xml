@@ -9,49 +9,9 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/input_layout"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-        <Button
-            android:id="@+id/btn_search"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Search"
-            android:drawableLeft="@android:drawable/ic_menu_search"
-            android:onClick="handleSearchClick"
-            />
-
-        <EditText
-            android:id="@+id/txt_search"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:hint="@string/search_hint"
-            android:layout_weight="1"
-            />
-    </LinearLayout>
-
-    <FrameLayout
-        android:id="@+id/container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/input_layout">
-
-        <!--<fragment-->
-            <!--android:id="@+id/fragment"-->
-            <!--android:name="edu.uw.fragmentdemo.MovieListFragment"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"/>-->
-
-    </FrameLayout>
-
-    <!--<ListView-->
-        <!--android:id="@+id/list_view"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_below="@id/input_layout"-->
-        <!--/>-->
+        android:layout_height="match_parent" />
 
 </RelativeLayout>
