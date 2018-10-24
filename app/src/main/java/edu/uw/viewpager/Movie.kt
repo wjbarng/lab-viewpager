@@ -7,10 +7,10 @@ import android.os.Parcelable
  * A class that represents information about a movie.
  */
 class Movie : Parcelable {
-    var title: String
-    var year: String
-    var description: String
-    var url: String
+    var title: String = ""
+    var year: String = ""
+    var description: String = ""
+    var url: String = ""
 
     constructor(title: String, year: String, description: String, url: String) {
         this.title = title

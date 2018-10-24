@@ -5,16 +5,19 @@ import android.content.Context
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.Volley
+import com.android.volley.toolbox.Volley.newRequestQueue
+
+//import com.android.volley.toolbox.Volley.newRequestQueue
 
 class RequestSingleton//private constructor; cannot instantiate directly
 private constructor(ctx: Context) {
 
     //get queue from singleton for direct action
-    val requestQueue: RequestQueue? = null //the singleton's RequestQueue
+    var requestQueue = null //the singleton's RequestQueue
 
     init {
         //create the requestQueue
-        this.requestQueue = Volley.newRequestQueue(ctx.applicationContext)
+        this.requestQueue = newRequestQueue(ctx.applicationContext)
     }
 
     //convenience wrapper method

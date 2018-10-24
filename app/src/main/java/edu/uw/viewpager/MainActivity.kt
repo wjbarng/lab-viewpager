@@ -8,6 +8,7 @@ import android.support.v4.view.PagerAdapter
 import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
+import android.view.View
 
 class MainActivity : AppCompatActivity(), MovieListFragment.OnMovieSelectedListener, SearchFragment.OnSearchListener {
 
@@ -23,7 +24,7 @@ class MainActivity : AppCompatActivity(), MovieListFragment.OnMovieSelectedListe
 
         searchFragment = SearchFragment.newInstance()
 
-        viewPager = findViewById<View>(R.id.pager)
+        viewPager = findViewById<ViewPager>(R.id.pager)
         pagerAdapter = MoviePagerAdapter(supportFragmentManager)
         viewPager!!.adapter = pagerAdapter
     }
