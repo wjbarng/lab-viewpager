@@ -100,10 +100,10 @@ class MovieListFragment : Fragment() {
                             if (track.getString("wrapperType") != "track")
                             //skip non-track results
                                 continue
-                            val title = track.getString("trackName")
-                            val year = track.getString("releaseDate")
-                            val description = track.getString("longDescription")
-                            val url = track.getString("trackViewUrl")
+                            val title:String = track.getString("trackName")
+                            val year: String = track.getString("releaseDate")
+                            val description: String = track.getString("longDescription")
+                            val url:String = track.getString("trackViewUrl")
                             val movie = Movie(title, year, description, url)
                             movies.add(movie)
                         }
@@ -117,7 +117,8 @@ class MovieListFragment : Fragment() {
                     }
                 }, Response.ErrorListener { error -> Log.e(TAG, error.toString()) })
 
-        RequestSingleton.getInstance(activity).add(request)
+        VolleyService.getInstance(activity!!).add(request)
+
     }
 
     companion object {
